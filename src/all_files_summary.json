@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "Motoko actor implementing e-commerce backend with product CRUD operations, shopping cart management per principal, and order placement with customer information collection.",
+  "feature_evidence.json": "JSON report documenting implemented features including product catalog, shopping cart, product detail pages, checkout process, and visual theme with associated files and test IDs.",
+  "frontend-file-summaries.txt": "JSON-formatted summaries of all frontend files describing their purpose, from styling and routing to individual page and component implementations.",
+  "frontend/index.css": "Tailwind CSS configuration with custom OKLCH color variables for light and dark modes using warm earth tones (terracotta, sage green, cream).",
+  "frontend/index.html": "HTML entry point with root div and module script reference to main.tsx for the Product Marketplace application.",
+  "frontend/src/App.tsx": "Root application component configuring TanStack Router with routes for catalog, product detail, cart, checkout, and order success pages, wrapped in ThemeProvider.",
+  "frontend/src/components/CartItem.tsx": "Cart item component displaying product image, name, price, quantity controls with increment/decrement buttons, subtotal calculation, and remove functionality.",
+  "frontend/src/components/Layout.tsx": "Site layout with sticky header containing logo, navigation, and cart badge; main content area; and footer with attribution link to caffeine.ai.",
+  "frontend/src/components/ProductCard.tsx": "Product card component showing product image with hover zoom, name, description, price, stock badge, and add-to-cart button with click-through to detail page.",
+  "frontend/src/hooks/useActor.ts": "Custom hook that creates and manages an authenticated or anonymous actor for backend communication, automatically invalidating dependent queries when the actor changes based on identity state.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides React context and hooks for Internet Identity authentication, managing login state, identity persistence, and delegation validation with configurable AuthClient options.",
+  "frontend/src/hooks/useQueries.ts": "Defines React Query hooks for all backend operations including product fetching, cart management (add/update/remove), checkout, and admin product creation with automatic cache invalidation.",
+  "frontend/src/index.css": "Tailwind CSS configuration with custom CSS variables for light/dark theme color schemes using warm earth tones (terracotta, sage green, cream) and utility classes for product cards and spacing.",
+  "frontend/src/main.tsx": "Application entry point that sets up React Query client and Internet Identity provider wrappers around the main App component.",
+  "frontend/src/pages/Cart.tsx": "Shopping cart page displaying cart items with quantities, order summary with subtotal calculation, and navigation to checkout or back to catalog when empty.",
+  "frontend/src/pages/Catalog.tsx": "Product catalog page with hero banner and grid layout displaying all products using ProductCard components, with loading skeletons and empty state handling.",
+  "frontend/src/pages/Checkout.tsx": "Checkout page with shipping information form (name, email, address) and order summary, handling order submission and redirecting to success page upon completion.",
+  "frontend/src/pages/OrderSuccess.tsx": "Order confirmation page displaying success message with order ID and option to continue shopping after successful checkout.",
+  "frontend/src/pages/ProductDetail.tsx": "Product detail page component that displays full product information, image, price, stock status, and an add-to-cart button with loading states and error handling.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration defining custom color scheme using OKLCH colors, typography with Inter and Playfair Display fonts, animations, and design tokens for the e-commerce theme.",
+  "project_state.json": "Project state file tracking an e-commerce website build with completed features including product catalog, shopping cart, checkout, and visual theme, plus pending backend data model and CRUD operations."
+}

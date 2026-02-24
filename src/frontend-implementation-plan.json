@@ -1,0 +1,183 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Create e-commerce website with product catalog and shopping cart",
+  "requirements": [
+    {
+      "id": "REQ-3",
+      "summary": "Create a product catalog page displaying all available products in a grid layout",
+      "acceptanceCriteria": [
+        "Products are displayed in a responsive grid",
+        "Each product card shows image, name, price, and stock status",
+        "Add to Cart button is visible on each product card"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Catalog.tsx",
+          "operation": "create",
+          "description": "Create catalog page component that fetches products from backend using getAllProducts(), displays them in a responsive grid layout, shows product images/names/prices/stock status, and provides Add to Cart buttons for each product"
+        },
+        {
+          "path": "frontend/src/components/ProductCard.tsx",
+          "operation": "create",
+          "description": "Create reusable ProductCard component that displays individual product information including image, name, price, stock status, and an Add to Cart button with click handler"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for /catalog path that renders the Catalog page component and ensure navigation links include catalog access"
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement a shopping cart system with add, view, adjust quantities, and remove functionality",
+      "acceptanceCriteria": [
+        "Users can add products to cart from the catalog",
+        "Cart displays all added items with quantities and subtotals",
+        "Users can increase or decrease item quantities",
+        "Users can remove items from cart",
+        "Cart shows total price calculation"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useCart.ts",
+          "operation": "create",
+          "description": "Create custom hook that manages cart state and provides functions to interact with backend cart methods: addToCart, getCart, updateCartItem, and removeCartItem"
+        },
+        {
+          "path": "frontend/src/pages/Cart.tsx",
+          "operation": "create",
+          "description": "Create cart page component that displays all cart items with product details, quantities, subtotals, allows quantity adjustments using updateCartItem, provides remove functionality using removeCartItem, and shows total price calculation"
+        },
+        {
+          "path": "frontend/src/components/CartItem.tsx",
+          "operation": "create",
+          "description": "Create CartItem component that displays individual cart item with product information, quantity controls (increase/decrease), remove button, and item subtotal"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for /cart path that renders the Cart page component and add cart navigation link in the app header/navigation"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create a product detail page showing full product information and purchase options",
+      "acceptanceCriteria": [
+        "Product detail page displays complete product information",
+        "Users can navigate to detail page by clicking products in catalog",
+        "Add to Cart functionality is available on detail page",
+        "Stock availability is clearly indicated"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProductDetail.tsx",
+          "operation": "create",
+          "description": "Create product detail page component that fetches single product using getProduct backend method, displays larger product image, full description, price, stock availability, and provides Add to Cart functionality"
+        },
+        {
+          "path": "frontend/src/components/ProductCard.tsx",
+          "operation": "modify",
+          "description": "Add click handler to ProductCard that navigates to product detail page when card is clicked, passing product ID as route parameter"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for /product/:id path that renders the ProductDetail page component with dynamic product ID parameter"
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Implement a checkout process that collects customer information and completes the order",
+      "acceptanceCriteria": [
+        "Checkout page collects customer name, email, and shipping address",
+        "Order summary displays all cart items and total price",
+        "Orders are saved to backend with customer details and purchased items",
+        "Success confirmation is shown after order completion",
+        "Cart is cleared after successful order"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Checkout.tsx",
+          "operation": "create",
+          "description": "Create checkout page component with form to collect CustomerInfo (name, email, address), display order summary with cart items and total, submit order using checkout backend method, and handle successful order completion"
+        },
+        {
+          "path": "frontend/src/pages/OrderSuccess.tsx",
+          "operation": "create",
+          "description": "Create order success page component that displays confirmation message with order ID and provides navigation back to catalog"
+        },
+        {
+          "path": "frontend/src/pages/Cart.tsx",
+          "operation": "modify",
+          "description": "Add Proceed to Checkout button that navigates to the checkout page when cart has items"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add routes for /checkout path rendering Checkout page and /order-success path rendering OrderSuccess page"
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Design a modern e-commerce visual theme with warm earth tones and product-focused aesthetic",
+      "acceptanceCriteria": [
+        "Consistent color scheme using warm earth tones throughout the application",
+        "Typography hierarchy clearly distinguishes headings, product names, prices, and body text",
+        "Layout uses whitespace effectively to highlight products",
+        "Design conveys professionalism and builds customer trust"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update global styles to implement earth tone color palette (terracotta, sage green, cream), establish typography hierarchy with clear font scales for headings/product names/prices/body text, and apply whitespace principles for clean product-focused layout"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind configuration with custom color theme including terracotta, sage green, and cream color values, add custom typography scales for e-commerce content hierarchy"
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create Layout component that provides consistent site-wide structure with branded header containing logo, navigation links (Catalog, Cart), and footer, applying the earth tone theme throughout"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap all page routes with Layout component to ensure consistent visual theme and navigation across the application"
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Render generated product images and logo as static assets in frontend/public/assets/generated",
+      "acceptanceCriteria": [
+        "All generated images are available in the public assets directory",
+        "Images are properly referenced in product catalog and throughout the application"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Reference the generated logo image frontend/public/assets/generated/logo.dim_200x200.png in the header navigation for site branding"
+        },
+        {
+          "path": "frontend/src/pages/Catalog.tsx",
+          "operation": "modify",
+          "description": "Add hero banner section at top of catalog page using generated image frontend/public/assets/generated/hero-banner.dim_1200x400.png to create welcoming entry point"
+        },
+        {
+          "path": "frontend/src/utils/sampleProducts.ts",
+          "operation": "create",
+          "description": "Create sample product data array that references generated product images: frontend/public/assets/generated/product-ceramic-bowl.dim_400x400.png, frontend/public/assets/generated/product-tote-bag.dim_400x400.png, frontend/public/assets/generated/product-desk-organizer.dim_400x400.png, and frontend/public/assets/generated/product-candle.dim_400x400.png for use in product catalog initialization or testing"
+        }
+      ]
+    }
+  ]
+}

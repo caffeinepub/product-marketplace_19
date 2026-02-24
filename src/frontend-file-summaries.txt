@@ -1,0 +1,14 @@
+{
+  "frontend/src/index.css": "Global styles with warm earth tone OKLCH color system (terracotta, sage green, cream) for both light and dark modes, plus custom product card and typography utilities.",
+  "frontend/tailwind.config.js": "Extended Tailwind configuration with earth tone colors, Playfair Display font for headings, custom border radius, soft shadows, and fade-in animation.",
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, ThemeProvider, and routes for catalog, product detail, cart, checkout, and order success pages.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations including products, cart management, and checkout functionality with proper cache invalidation.",
+  "frontend/src/components/Layout.tsx": "Site-wide layout component with sticky header featuring logo and cart badge, main content area, and footer with attribution.",
+  "frontend/src/components/ProductCard.tsx": "Reusable product card component displaying product image, name, description, price, stock status, and add-to-cart button with hover effects.",
+  "frontend/src/components/CartItem.tsx": "Cart item component with product details, quantity controls (increment/decrement), remove button, and subtotal calculation (fixed Tailwind v3 class).",
+  "frontend/src/pages/Catalog.tsx": "Main catalog page with hero banner and responsive product grid displaying all available products with loading states.",
+  "frontend/src/pages/ProductDetail.tsx": "Detailed product view page with large image, full description, stock information, and add-to-cart functionality.",
+  "frontend/src/pages/Cart.tsx": "Shopping cart page displaying all cart items with quantity controls, order summary, and checkout button (fixed React Hooks violation by using useGetAllProducts at top level).",
+  "frontend/src/pages/Checkout.tsx": "Checkout page with customer information form (name, email, address), order summary, and order placement functionality (fixed React Hooks violation by using useGetAllProducts at top level).",
+  "frontend/src/pages/OrderSuccess.tsx": "Order confirmation page displaying success message with order ID and navigation back to catalog."
+}

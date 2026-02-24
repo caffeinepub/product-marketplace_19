@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "E-commerce website for product selling",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Modern minimalist e-commerce logo with shopping bag icon in terracotta and sage green colors (logo.dim_200x200.png)\n- Hero banner showing curated product display with warm natural lighting and earth tone background (hero-banner.dim_1200x400.png)\n- Sample product image: handcrafted ceramic bowl with natural texture (product-ceramic-bowl.dim_400x400.png)\n- Sample product image: organic cotton tote bag in sage green (product-tote-bag.dim_400x400.png)\n- Sample product image: minimalist wooden desk organizer (product-desk-organizer.dim_400x400.png)\n- Sample product image: artisan scented candle in terracotta holder (product-candle.dim_400x400.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-product-catalog-page-displaying-all-available-products-in-a-grid-layout-with-product-images-names-prices-and-add-to-cart-buttons",
+      "title": "Create a product catalog page displaying all available products in a grid layout with product images, names, prices, and 'Add to Cart' buttons",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-shopping-cart-system-that-allows-users-to-add-products-view-cart-contents-adjust-quantities-and-remove-items",
+      "title": "Implement a shopping cart system that allows users to add products, view cart contents, adjust quantities, and remove items",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-product-detail-page-showing-full-product-information-larger-image-and-purchase-options",
+      "title": "Create a product detail page showing full product information, larger image, and purchase options",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-checkout-process-that-collects-customer-information-and-completes-the-order",
+      "title": "Implement a checkout process that collects customer information and completes the order",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-modern-professional-e-commerce-visual-theme-with-a-clean-product-focused-aesthetic-using-warm-earth-tones-terracotta-sage-green-cream-with-clear-typography-and-generous-whitespace-that-emphasizes-product-imagery-and-creates-a-trustworthy-shopping-experience",
+      "title": "Design a modern, professional e-commerce visual theme with a clean product-focused aesthetic using warm earth tones (terracotta, sage green, cream) with clear typography and generous whitespace that emphasizes product imagery and creates a trustworthy shopping experience",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-generated-product-images-and-logo-as-static-assets-in-frontend-public-assets-generated",
+      "title": "Render generated product images and logo as static assets in frontend/public/assets/generated",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create e-commerce website with product selling functionality",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Create a backend data model for products with fields: id, name, description, price, image URL, and stock quantity",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Implement backend functions to add, retrieve, update, and delete products",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Product Marketplace",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

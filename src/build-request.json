@@ -1,0 +1,174 @@
+{
+  "kind": "build_request",
+  "title": "Create e-commerce website with product catalog and shopping cart",
+  "projectName": "Product Marketplace",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a backend data model for products with fields: id, name, description, price, image URL, and stock quantity",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "create a website for product selling"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Product type is defined with all specified fields",
+        "CRUD operations are available for managing products"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement backend functions to add, retrieve, update, and delete products",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "create a website for product selling"
+        ]
+      },
+      "acceptanceCriteria": [
+        "addProduct function creates new product entries",
+        "getProducts function returns all products",
+        "getProduct function returns a single product by ID",
+        "updateProduct function modifies existing products",
+        "deleteProduct function removes products"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create a product catalog page displaying all available products in a grid layout with product images, names, prices, and 'Add to Cart' buttons",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "create a website for product selling"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Products are displayed in a responsive grid",
+        "Each product card shows image, name, price, and stock status",
+        "Add to Cart button is visible on each product card"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement a shopping cart system that allows users to add products, view cart contents, adjust quantities, and remove items",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "create a website for product selling"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can add products to cart from the catalog",
+        "Cart displays all added items with quantities and subtotals",
+        "Users can increase or decrease item quantities",
+        "Users can remove items from cart",
+        "Cart shows total price calculation"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create a product detail page showing full product information, larger image, and purchase options",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "create a website for product selling"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Product detail page displays complete product information",
+        "Users can navigate to detail page by clicking products in catalog",
+        "Add to Cart functionality is available on detail page",
+        "Stock availability is clearly indicated"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement a checkout process that collects customer information and completes the order",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "create a website for product selling"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Checkout page collects customer name, email, and shipping address",
+        "Order summary displays all cart items and total price",
+        "Orders are saved to backend with customer details and purchased items",
+        "Success confirmation is shown after order completion",
+        "Cart is cleared after successful order"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Design a modern, professional e-commerce visual theme with a clean product-focused aesthetic using warm earth tones (terracotta, sage green, cream) with clear typography and generous whitespace that emphasizes product imagery and creates a trustworthy shopping experience",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Consistent color scheme using warm earth tones throughout the application",
+        "Typography hierarchy clearly distinguishes headings, product names, prices, and body text",
+        "Layout uses whitespace effectively to highlight products",
+        "Design conveys professionalism and builds customer trust"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Render generated product images and logo as static assets in frontend/public/assets/generated",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All generated images are available in the public assets directory",
+        "Images are properly referenced in product catalog and throughout the application"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use single-actor Motoko architecture for backend",
+    "Do not modify immutable frontend paths: hooks/useInternetIdentity, hooks/useActor, main.tsx, components/ui"
+  ],
+  "nonGoals": [
+    "Real-time inventory synchronization",
+    "Third-party payment gateway integration beyond basic order processing",
+    "Multi-vendor marketplace functionality",
+    "Product review and rating system",
+    "Advanced search and filtering (initial version)"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Modern minimalist e-commerce logo with shopping bag icon in terracotta and sage green colors (logo.dim_200x200.png)",
+      "Hero banner showing curated product display with warm natural lighting and earth tone background (hero-banner.dim_1200x400.png)",
+      "Sample product image: handcrafted ceramic bowl with natural texture (product-ceramic-bowl.dim_400x400.png)",
+      "Sample product image: organic cotton tote bag in sage green (product-tote-bag.dim_400x400.png)",
+      "Sample product image: minimalist wooden desk organizer (product-desk-organizer.dim_400x400.png)",
+      "Sample product image: artisan scented candle in terracotta holder (product-candle.dim_400x400.png)"
+    ],
+    "edits": []
+  }
+}
